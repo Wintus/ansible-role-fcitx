@@ -1,0 +1,6 @@
+---
+- name: remove iBus
+  become: yes
+  package:
+    name: ibus*
+    state: absent
