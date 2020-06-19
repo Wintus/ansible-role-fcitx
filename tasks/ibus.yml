@@ -1,11 +1,4 @@
-- name: remove iBus
-  when: ansible_pkg_mgr == "apt"
-  become: yes
-  apt:
-    name: ibus*
-    state: absent
-    purge: yes
-
+---
 - name: remove iBus
   become: yes
   package:
