@@ -5,9 +5,13 @@
     name: fcitx
     state: absent
   become: yes
+  tags:
+    - uninstall
 
 - name: setup fcitx env for wayland
   file:
     path: /etc/profile.d/fcitx.sh
     state: absent
   become: yes
+  tags:
+    - uninstall
